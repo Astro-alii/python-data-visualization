@@ -22,7 +22,7 @@ ax[0].plot(date ,high , color = "red")
 
 ax[0].set_title("Daily High")
 
-ax[1].plot(date,high,  color = "blue")
+ax[1].plot(date,low,  color = "blue")
 
 ax[1].set_title("Daily Low")
 
