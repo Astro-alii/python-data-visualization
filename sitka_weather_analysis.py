@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
 import plotly.express as px 
 from pathlib import Path  
 import csv
@@ -17,15 +18,33 @@ for read in reader:
     low.append (int(read[5]))
     date.append(datetime.strptime(read[2], "%Y-%m-%d"))
 
-fig , ax = plt.subplots(1,2,figsize= (10, 5))
-ax[0].plot(date ,high , color = "red")
+fig =plt.figure(figsize = (12,8))
+grid = gridspec.GridSpec(2,2)
 
-ax[0].set_title("Daily High")
+#High plot 
+ax1 = fig.add_subplot(grid[0,0])
+ax1.plot(date ,high , color = "red")
+ax1.set_title("Daily High")
+ax1.set_ylabel("Temperature (°F)")
+#Low plot
+ax2 = fig.add_subplot(grid[0,1])
+ax2.plot(date,low,  color = "blue")
+ax2.set_title("Daily Low")
+ax2.set_ylabel("Temperature (°F)")
 
-ax[1].plot(date,low,  color = "blue")
+#Combined High and Low plots
+ax3 = fig.add_subplot(grid[1,:])
+ax3.plot(date, high, color = "red")
+ax3.plot(date , low , color = "blue")
+ax3.set_title("Daily High vs Low")
+ax3.set_ylabel("Temperature (°F)")
 
-ax[1].set_title("Daily Low")
+#Shading the combined graph
+ax3.fill_between(date , high , low,facecolor ="green" , alpha = 0.3)
 
-plt.tight_layout()
-fig.autofmt_xdate(rotation=45)
+plt.subplots_adjust(hspace = 0.6)
+
+for ax in [ax1, ax2, ax3]:
+    ax.tick_params(axis='x', labelrotation=45)
+
 plt.show()
