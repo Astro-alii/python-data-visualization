@@ -6,8 +6,8 @@ import csv
 from datetime import datetime
 
 #Sitka weather trend over the year 2021
-path = Path("weather_data/sitka_weather_2021_simple.csv")
-data_list =path.read_text().splitlines()
+path = Path("data_files/sitka_weather_2021_simple.csv")
+data_list =path.read_text().splitlines
 reader = csv.reader(data_list)
 reader_ = next(reader)
 high = [] #index 4
