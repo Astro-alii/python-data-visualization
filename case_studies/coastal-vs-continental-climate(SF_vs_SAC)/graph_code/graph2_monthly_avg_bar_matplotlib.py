@@ -9,14 +9,14 @@ SAC_df = pd.read_csv("raw_data_files/sacramento_data_2000_2025.csv")
 SF_df["DATE"] = pd.to_datetime(SF_df["DATE"])
 SAC_df["DATE"] = pd.to_datetime(SAC_df["DATE"])
 
-SF_df['month'] = SF_df['DATE'].dt.month
-SAC_df['month'] = SAC_df['DATE'].dt.month
+SF_df['MONTH'] = SF_df['DATE'].dt.month
+SAC_df['MONTH'] = SAC_df['DATE'].dt.month
 
 
-sf_avg_high = SF_df.groupby('month')['TMAX'].mean()
-sf_avg_low = SF_df.groupby('month')['TMIN'].mean()
-sac_avg_high = SAC_df.groupby('month')['TMAX'].mean()
-sac_avg_low = SAC_df.groupby('month')['TMIN'].mean()
+sf_avg_high = SF_df.groupby('MONTH')['TMAX'].mean()
+sf_avg_low = SF_df.groupby('MONTH')['TMIN'].mean()
+sac_avg_high = SAC_df.groupby('MONTH')['TMAX'].mean()
+sac_avg_low = SAC_df.groupby('MONTH')['TMIN'].mean()
 
 months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 plt.figure(figsize=(14,6))
