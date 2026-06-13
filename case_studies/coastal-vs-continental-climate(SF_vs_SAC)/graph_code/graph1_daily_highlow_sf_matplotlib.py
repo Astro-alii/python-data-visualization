@@ -1,13 +1,9 @@
 import matplotlib.pyplot as plt 
-import csv
-from pathlib import Path 
-from datetime import datetime
 import pandas as pd
 #Multi-Line Temperature Cross Over Plot
-#San Francisco Daily High and Low usign matplotlib
+#San Francisco Daily High and Low usign matplotlib and pandas
 #5 graphs over 5 years windows
 SF_df = pd.read_csv("raw_data_files/san_francisco_data_2000_2025.csv") 
-SAC_df = pd.read_csv("raw_data_files/sacramento_data_2000_2025.csv")
 
 SF_df["DATE"] = pd.to_datetime(SF_df["DATE"])
 
@@ -59,4 +55,4 @@ ax[2,0].tick_params(axis='both', labelsize=9)
 ax[2, 1].set_visible(False)
 
 plt.tight_layout()
-plt.savefig("graph1_daily_highlow_sf_matplotlib.png",dpi = 150 , bbox_inches='tight' )
+plt.show()
