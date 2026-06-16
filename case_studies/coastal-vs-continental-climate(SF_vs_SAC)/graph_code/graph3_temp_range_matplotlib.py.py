@@ -37,4 +37,4 @@ plt.xlabel("Month", fontsize=12)
 plt.ylabel("Temperature Range (°F)", fontsize=12)
 
 
-plt.savefig("graph3_diurnal_temp_range.png", dpi=150, bbox_inches='tight')
+plt.show()

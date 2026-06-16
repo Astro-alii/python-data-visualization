@@ -25,4 +25,4 @@ fig.update_layout(
     xaxis=dict(rangeslider=dict(visible=True)),
     title="Daily Rolling Temperatures — San Francisco vs Sacramento (2000–2025)"
 )
-fig.write_html("graph1b_daily_highlow_combined_rolling_plotly.html")
+fig.show()

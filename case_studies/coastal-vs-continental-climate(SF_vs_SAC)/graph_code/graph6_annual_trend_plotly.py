@@ -58,4 +58,4 @@ fig.update_layout(
     yaxis_title="Average Temperature (°F)",
     height=600
 )
-fig.write_html("graph6_annual_trend_plotly.html")
+fig.show()

@@ -50,4 +50,4 @@ fig.update_layout(
     yaxis_title="Average Temperature (°F)",
     height=600
 )
-fig.write_html('graph2_monthly_avg_line.html')
+fig.show()

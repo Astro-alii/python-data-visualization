@@ -32,4 +32,5 @@ plt.ylabel("Average Temperature (°F)",fontsize=12)
 plt.xticks(x, months, fontsize=10)
 plt.title("Monthly Average High & Low Temperatures — SF vs Sacramento (2000–2025)")
 plt.legend(fontsize=10)
-plt.savefig("graph2_monthly_avg_bar.png", dpi=150, bbox_inches="tight")
+
+plt.show()

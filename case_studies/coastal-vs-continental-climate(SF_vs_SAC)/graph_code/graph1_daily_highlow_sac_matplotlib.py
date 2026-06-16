@@ -57,4 +57,4 @@ ax[2,0].tick_params(axis='both', labelsize=9)
 ax[2, 1].set_visible(False)
 
 plt.tight_layout()
-plt.savefig("graph1_daily_highlow_sac_matplotlib.png",dpi = 150 , bbox_inches='tight' ) 
+plt.show()

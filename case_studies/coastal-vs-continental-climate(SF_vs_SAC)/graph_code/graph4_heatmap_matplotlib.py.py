@@ -33,4 +33,4 @@ ax2.set_title("Sacramento Daily High Temperature Heatmap (2000–2025)", fontsiz
 
 fig.suptitle("Monthly Average High Temperatures — SF vs Sacramento", fontsize=16, fontweight='bold')
 plt.tight_layout()
-plt.savefig("graph4_heatmap.png",dpi = 150 , bbox_inches= "tight")
+plt.show()

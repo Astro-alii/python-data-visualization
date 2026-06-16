@@ -22,4 +22,5 @@ plt.figure(figsize=(16, 6))
 sns.boxplot(data=combined_df, x='MONTH', y='TMAX', hue='city', 
             palette={'San Francisco': '#E63946', 'Sacramento': '#F4A261'})
 plt.xticks(range(1,13), ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'])
-plt.savefig('graph5_boxplot.png', dpi=150, bbox_inches='tight')
+
+plt.show()
