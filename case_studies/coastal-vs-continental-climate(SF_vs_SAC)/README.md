@@ -15,6 +15,16 @@ This case study investigates how **geography shapes local climate** by comparing
 Using **9,130+ daily records per city** spanning 2000–2025, this analysis applies six distinct visualization techniques across two Python libraries to quantify the difference between coastal and inland climates — and to understand the geography that drives it.
 
 ---
+## 📊 Note on Jupyter Notebook Visualizations
+
+This project uses **Plotly** for interactive data visualizations. 
+
+Please note that **GitHub does not render interactive Plotly graphs** in notebook preview mode because it blocks active JavaScript for security reasons. (Matplotlib plots will still display normally as they are static images).
+
+**To view the interactive plots, you can:**
+1. Download the `.ipynb` file and run it locally in VS Code or Jupyter.
+2. View the notebook via [NBViewer](https://nbviewer.org/) by pasting the GitHub repository link.
+---
 
 ## 🔬 Hypothesis
 
