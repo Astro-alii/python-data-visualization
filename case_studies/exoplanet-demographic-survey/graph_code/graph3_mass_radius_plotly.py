@@ -4,8 +4,6 @@ import pandas as pd
 df = pd.read_csv("raw_data_files/exoplanets_raw.csv" , comment = "#")
 df_clean = df.dropna(subset = ["pl_masse" , "pl_rade"])
 
-print (len (df_clean["pl_masse"]))
-print (len (df_clean["pl_rade"]))
 
 fig = px.scatter(df_clean, df_clean["pl_masse"], df_clean["pl_rade"], log_x= True , log_y= True,
                  color = "discoverymethod",
